@@ -1,14 +1,9 @@
-#!/usr/bin/env python
-# coding: utf-8
 
-# In[129]:
 
 
 import numpy as np
 import pandas as pd
 
-
-# In[130]:
 
 
 def get_data(df, category, time_range):
@@ -31,13 +26,9 @@ def get_data(df, category, time_range):
     return result
 
 
-# In[131]:
-
 
 df_grade = pd.read_csv('/Users/tongxu/Desktop/grades.csv', delimiter='\t')
 
-
-# In[132]:
 
 
 def ADF(df, category, time_range):
@@ -65,7 +56,6 @@ def ADF(df, category, time_range):
     return df_stationarity
 
 
-# In[133]:
 
 
 def Order_Permutation(df, category, time_range):
@@ -90,14 +80,6 @@ def Order_Permutation(df, category, time_range):
                                                     columns = [category, 'Column Name', 'Stationarity','Order']))
     return df_order
 
-
-# In[141]:
-
-
-SES(df_grade, 'Student', 'Year', "History")
-
-
-# In[134]:
 
 
 def SES(df, category, time_range, column):
@@ -145,7 +127,6 @@ def SES(df, category, time_range, column):
     return new_df
 
 
-# In[144]:
 
 
 def Estimate(df, category, time_range, column):
@@ -233,7 +214,6 @@ def Estimate(df, category, time_range, column):
     return new_df
 
 
-# In[145]:
 
 
 def Run(df, category, time_range):
@@ -243,13 +223,6 @@ def Run(df, category, time_range):
     return df
 
 
-# In[146]:
-
-
-Run(df_grade, 'Student', 'Year')
-
-
-# In[ ]:
 
 
 
