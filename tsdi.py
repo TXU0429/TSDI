@@ -27,10 +27,6 @@ def get_data(df, category, time_range):
 
 
 
-df_grade = pd.read_csv('/Users/tongxu/Desktop/grades.csv', delimiter='\t')
-
-
-
 def ADF(df, category, time_range):
     """
     use the Augmented Dickey-Fuller(ADF) test to test the stationarity 
